@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">SayTech</string>
+    <string name="email_login">Correo Electrónico</string>
+    <string name="password_login">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="sign_up_button">Regístrate</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="new_account">Crear cuenta</string>
+    <string name="ok">OK</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="customers_string">Clientes</string>
+    <string name="account_details">Detalles de cuenta</string>
+    <string name="bank_details">Formas de pago</string>
+    <string name="sku">SKU#:</string>
+    <string name="stock">Inventario:</string>
+    <string name="details">Detalles:</string>
+    <string name="save">Guardar</string>
+    <string name="location">Ubicación:</string>
+    <string name="time">Hora:</string>
+    <string name="order_total">Total del pedido:</string>
+    <string name="total">Total</string>
+    <string name="total_colon">Total:</string>
+    <string name="number_of_stores">Número de tiendas</string>
+    <string name="customer">Cliente:</string>
+    <string name="order_details">Detalles del pedido</string>
+    <string name="accept">Aceptar</string>
+    <string name="sellers">Distribuidores</string>
+    <string name="transaction_history">Historial</string>
+    <string name="browse_sellers">Buscar Distribuidores</string>
+    <string name="search_sellers">¿Qué buscas?</string>
+    <string name="brand_filter">Marca</string>
+    <string name="type_filter">Tipo</string>
+    <string name="category_filter">Categoría</string>
+    <string name="register">Regístrate</string>
+    <string name="business_name">Nombre de empresa</string>
+    <string name="biz_name_hint">Distribuidora ejemplo…</string>
+    <string name="account_admin">Adminstrador de cuenta</string>
+    <string name="account_admin_eg">Ej. Ricardo Arjona</string>
+    <string name="phone_number">Número de teléfono</string>
+    <string name="phone_number_hint">Número de teléfono</string>
+    <string name="address">Dirección</string>
+    <string name="address_hint">Dirección</string>
+    <string name="reenter_password">Ingresar contraseña nuevamente</string>
+    <string name="reenter_password_hint">Ingresar contraseña nuevamente</string>
+    <string name="profile_picture">Foto de perfíl</string>
+    <string name="share_location">Compartir Ubicación</string>
+    <string name="cancel">Cancelar</string>
+    <string name="login_error">Los datos no coinciden</string>
+    <string name="basket">Carrito</string>
+    <string name="no_items_in_basket">Tu carrito está vacío…Compra las ofertas del dia!</string>
+    <string name="go_back">Regresar</string>
+    <string name="buy">Comprar</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="pending">Pendiente</string>
+    <string name="completed">Realizado</string>
+    <string name="no_orders_to_display">Aun no tienes un historial de pedidos</string>
+    <string name="error_loading_orders">Error al cargar</string>
+    <string name="location_order">Ubicación:</string>
+    <string name="date_order">Fecha:</string>
+    <string name="purchase_failed">La compra fallo</string>
+    <string name="confirm_order_dialog">Presione OK para procesar este pedido.</string>
+    <string name="basket_empty">No hay órdenes activas</string>
+    <string name="signup_successful">Registro exitoso</string>
+    <string name="signup_failed">Registro fallido</string>
+    <string name="enter_business_name">Ingresa el nombre de la empresa</string>
+    <string name="enter_phone_number">Ingresa numero de teléfono</string>
+    <string name="enter_account_manager_name">Ingresa nombre del administrador de la cuenta</string>
+    <string name="enter_business_address">Ingresa la dirección comercial</string>
+    <string name="enter_email">Ingresa tu correo electrónico</string>
+    <string name="enter_password">Ingresar contraseña</string>
+    <string name="enter_password_confirmation">Ingresar contraseña nuevamente</string>
+    <string name="passwords_dont_match">No válido. Las contraseñas no coinciden.</string>
+    <string name="please_upload_picture">Por favor agregar una imagen</string>
+    <string name="need_location">No podemos continuar sin tu ubicacion</string>
+    <string name="give_location_permission">Le das permiso a esta aplicación para usar tu ubicación?</string>
+    <string name="yes">Sí</string>
+    <string name="basket_with_other_seller_message">"Existe un pedido con otro vendedor. " +
+                        "Si deseas continuar, ese pedido se eliminará y se creará uno nuevo." </string>
+    <string name="continuar">Continuar</string>
+    <string name="email_notfound_error">El usuario no esta correcto. Por favor verifique la información nuevamente</string>
+    <string name="no_passowrd_error">Falta tu contraseña</string>
+
+    <!-- Notifcation channel info below -->
+
+    <string name="channel_name">ORDERS_CHANNEL</string>
+    <string name="channel_description">order notification channel </string>
+
+
+</resources>

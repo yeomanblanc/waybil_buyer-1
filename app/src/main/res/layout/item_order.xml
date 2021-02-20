@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <LinearLayout
+        android:id="@+id/order_item_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/upper_container_order"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:background="@drawable/pending_bg">
+
+
+            <TextView
+                android:id="@+id/store_name_order"
+                style="@style/WhiteFontBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text=" - "
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/location_label_order"
+                style="@style/WhiteFontItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/location_order"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/store_name_order" />
+
+            <TextView
+                android:id="@+id/address_order"
+                style="@style/WhiteFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:text=" - "
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/location_label_order"
+                app:layout_constraintTop_toBottomOf="@+id/store_name_order" />
+
+            <TextView
+                android:id="@+id/time_label_order"
+                style="@style/WhiteFontItalic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/date_order"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/location_label_order"
+                app:layout_constraintStart_toStartOf="@+id/location_label_order" />
+
+            <TextView
+                android:id="@+id/time_order"
+                style="@style/WhiteFont"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:text=" - "
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/time_label_order"
+                app:layout_constraintEnd_toEndOf="@+id/address_order"
+                app:layout_constraintStart_toEndOf="@+id/time_label_order"
+                app:layout_constraintTop_toTopOf="@+id/time_label_order" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_container_order"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bottom_rounded_orders">
+
+
+            <TextView
+                android:id="@+id/total_header_order"
+                style="@style/WhiteFont"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center"
+                android:text="@string/order_total"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/total_order_view"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/total_order_view"
+                style="@style/WhiteFont"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text=" - "
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/total_header_order"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</layout>

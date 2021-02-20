@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryWhite"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/productImage_basket"
+            android:background="@drawable/round_outline"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_box"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_marginEnd="8dp"
+            style="@style/BasketItems"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="CocaCola 355ml x 10"
+            android:textSize="12sp"
+            android:gravity="center_vertical|end"
+            />
+
+
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            style="@style/BasketItems"
+            android:text="Q685.68"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_weight="0.75"/>
+
+        <TextView
+            android:id="@+id/remove_product_basket"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            style="@style/LightButton"
+            android:layout_weight="0.4"
+            android:text="-"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/product_quantity"
+            style="@style/BasketItems"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.4"
+            android:layout_gravity="center"
+            android:text="23"
+            android:textSize="12sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/add_product_basket"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            style="@style/LightButton"
+            android:layout_weight="0.4"
+            android:text="+"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+</layout>

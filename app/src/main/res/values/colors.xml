@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0D1842</color>
+    <color name="colorPrimaryLightField">#2AFFFFFF</color>
+    <color name="colorLightGray">#909090</color>
+    <color name="colorGray">#E8E8E8</color>
+    <color name="colorPrimaryWhite">#FFFFFF</color>
+    <color name="colorAccent">#8DC9FF</color>
+    <color name="colorPending">#E56F11</color>
+    <color name="colorCompleted">#47A273</color>
+    <color name="colorPrimaryLight">#213992</color>
+    <color name="colorLightBack">#29304C</color>
+    <color name="colorLightBlueLogo">#95C6EB</color>
+    <color name="warningRed">#F44336</color>
+</resources>

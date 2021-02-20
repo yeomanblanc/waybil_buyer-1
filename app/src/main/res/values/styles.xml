@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+    </style>
+
+
+    <style name="WhiteFont">
+        <item name="android:textColor">@color/colorPrimaryWhite</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+    </style>
+
+    <style name="WhiteFontItalic">
+        <item name="android:textColor">@color/colorPrimaryWhite</item>
+        <item name="fontFamily">@font/futura_medium_italic</item>
+
+    </style>
+
+    <style name="WhiteFontBold">
+        <item name="android:textColor">@color/colorPrimaryWhite</item>
+        <item name="android:fontFamily">@font/futura_heavy</item>
+    </style>
+
+    <style name="DarkFontItalic">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/futura_medium_italic</item>
+    </style>
+
+    <style name="DarkFont">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+    </style>
+
+    <style name="DarkFontBold">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/futura_heavy</item>
+    </style>
+
+    <style name="ToggleButtons">
+        <item name="android:background">@color/colorGray</item>
+    </style>
+
+
+    <style name="WhiteButtons">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/white_buttons_bg</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+    </style>
+
+    <style name="AccentButtons">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorPrimaryWhite</item>
+        <item name="android:background">@drawable/accent_buttons_bg</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+    </style>
+
+    <style name="LightButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/light_button</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+    </style>
+
+    <style name="AccentButtonsTwo">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorPrimaryWhite</item>
+        <item name="android:background">@drawable/accent_button_round</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+    </style>
+
+    <style name="BasketItems">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/white_buttons_bg</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+    </style>
+
+    <style name="FragmentHeaders">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/futura_medium</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextWithAccentColor">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+</resources>
