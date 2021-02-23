@@ -8,6 +8,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.request.RequestOptions
+import com.google.firebase.firestore.GeoPoint
 import com.google.firebase.storage.StorageReference
 import saymobile.company.saytechbuyer.model.GlideApp
 import java.math.BigDecimal
@@ -15,6 +16,8 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
+
+var temporaryGeoPoint: GeoPoint? = null
 
 
 fun Fragment.hideKeyboard() {
@@ -78,5 +81,18 @@ fun Fragment.hideKeyboard() {
         bigDecimal.setScale(2, RoundingMode.HALF_UP)
         return bigDecimal.toFloat()
     }
+
+fun tempGeoPoint(geoPoint: GeoPoint){
+    temporaryGeoPoint = geoPoint
+}
+
+fun getCurrentLocation(): GeoPoint?{
+    return temporaryGeoPoint
+}
+
+fun resetTempGeoPoint(){
+    temporaryGeoPoint = null
+}
+
 
 

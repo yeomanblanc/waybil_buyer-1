@@ -30,12 +30,15 @@ import com.google.firebase.Timestamp
 import com.google.firebase.firestore.GeoPoint
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import saymobile.company.saytechbuyer.R
+import saymobile.company.saytechbuyer.getCurrentLocation
 import saymobile.company.saytechbuyer.model.user.User
+import saymobile.company.saytechbuyer.resetTempGeoPoint
 import saymobile.company.saytechbuyer.viewModel.signup.SignUpViewModel
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.jvm.Throws
 
 private lateinit var currentPhotoPath: String
 private const val REQUEST_TAKE_PHOTO = 1
@@ -71,7 +74,15 @@ class SignUpActivity : AppCompatActivity() {
         upload_image_button.setOnClickListener { dispatchTakePictureIntent() }
 
         share_location_button.setOnClickListener {
-            getLocation()
+            val lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+            if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER) ||
+                !lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+            ) {
+                locationSettingsPrompt()
+            } else {
+                startActivity(Intent(this, GeopinActivity::class.java))
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            }
         }
 
         observeViewModel()
@@ -239,59 +250,6 @@ class SignUpActivity : AppCompatActivity() {
     }
 
 
-    private fun getLocation() {
-
-        //Check if it returns null. If so maybe ask user to check location settings
-        mLocationRequest.apply {
-            priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-            interval = 1000
-            fastestInterval = 1000
-        }
-
-        //Checking to see if we have permission to acess location
-        if (ContextCompat.checkSelfPermission(
-                this@SignUpActivity,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) !=
-            PackageManager.PERMISSION_GRANTED
-        ) {
-            /**
-             * check to see if are granted location permissions
-             * If true we continue to see if location services are on on the device
-             */
-            getLocationPermission()
-        } else {
-
-            //Checking if location is on in settings
-            //If location is turned on it just continues
-
-            /**
-             * code to see result. If ok was pressed then we return a number that confirms we can
-             * continue to the next lines
-             */
-            locationSettingsPrompt()
-
-            fusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, null)
-
-
-//            location_loading.visibility = View.VISIBLE
-            fusedLocationClient.lastLocation
-                .addOnSuccessListener { location: Location? ->
-                    location?.let {
-                        val currentLocation = GeoPoint(location.latitude, location.longitude)
-                        userLocation = currentLocation
-                        val locationString = "${location.latitude}, ${location.longitude}"
-                        current_location.text = locationString
-                    }
-
-                }.addOnCompleteListener {
-                    fusedLocationClient.removeLocationUpdates(mLocationCallback)
-                    println(userLocation)
-                }
-
-
-        }
-    }
 
     private fun locationSettingsPrompt() {
         val lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -314,25 +272,17 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
-    private fun getLocationPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(
-                this@SignUpActivity,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            )
-        ) {
-            ActivityCompat.requestPermissions(
-                this@SignUpActivity,
-                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1
-            )
-            getLocation()
-        } else {
-            ActivityCompat.requestPermissions(
-                this@SignUpActivity,
-                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1
-            )
-            getLocation()
+    override fun onResume() {
+        super.onResume()
+        userLocation = getCurrentLocation()
+        resetTempGeoPoint()
+        if(userLocation == null){
+            geolocation_status_signup.setImageResource(R.drawable.warning_icon)
+        }else{
+            geolocation_status_signup.setImageResource(R.drawable.checkmark_icon)
         }
     }
+
 
 
 }
