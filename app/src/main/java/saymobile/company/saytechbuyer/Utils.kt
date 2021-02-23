@@ -76,11 +76,6 @@ fun Fragment.hideKeyboard() {
 //        return "Q$decimalFormat"
     }
 
-    fun formatFloatDecimal(value: Double): Float {
-        val bigDecimal = BigDecimal(value)
-        bigDecimal.setScale(2, RoundingMode.HALF_UP)
-        return bigDecimal.toFloat()
-    }
 
 fun tempGeoPoint(geoPoint: GeoPoint){
     temporaryGeoPoint = geoPoint
