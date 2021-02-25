@@ -154,19 +154,11 @@ class AddBusinessFragment : Fragment() {
         businessLocation = getCurrentLocation()
         resetTempGeoPoint()
         if (businessLocation == null) {
-            geolocation_status_addBusiness.setBackgroundColor(
-                ContextCompat.getColor(
-                    requireActivity(),
-                    R.color.colorPending
-                )
-            )
+            geolocation_status_addBusiness.setBackgroundResource(R.drawable.circle_status_pending)
+
         } else {
-            geolocation_status_addBusiness.setBackgroundColor(
-                ContextCompat.getColor(
-                    requireActivity(),
-                    R.color.colorCompleted
-                )
-            )
+            geolocation_status_addBusiness.setBackgroundResource(R.drawable.circle_status_confirmed)
+
         }
     }
 

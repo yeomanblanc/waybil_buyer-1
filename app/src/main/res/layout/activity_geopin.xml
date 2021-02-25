@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/gradient_primary_color"
     tools:context=".view.GeopinActivity">
 
     <TextView
@@ -38,7 +38,7 @@
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:background="@drawable/dark_button"
+            android:background="@drawable/grey_transparent_button"
             android:gravity="center"
             android:text="Cancelar"
             android:textAppearance="@style/WhiteFont"

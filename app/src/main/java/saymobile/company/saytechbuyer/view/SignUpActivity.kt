@@ -277,9 +277,9 @@ class SignUpActivity : AppCompatActivity() {
         userLocation = getCurrentLocation()
         resetTempGeoPoint()
         if(userLocation == null){
-            geolocation_status_signup.setImageResource(R.drawable.warning_icon)
+            geolocation_status_signup.setBackgroundResource(R.drawable.circle_status_pending)
         }else{
-            geolocation_status_signup.setImageResource(R.drawable.checkmark_icon)
+            geolocation_status_signup.setBackgroundResource(R.drawable.circle_status_confirmed)
         }
     }
 

@@ -72,13 +72,13 @@
                         android:id="@+id/editBizName_addBusiness"
                         style="@style/WhiteFont"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="40dp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/information_fields_light"
                         android:ems="10"
                         android:hint="Tienda San Lucas"
                         android:inputType="textPersonName"
-                        android:padding="8dp"
+                        android:padding="10dp"
                         android:textSize="16sp"
                         android:theme="@style/Theme.MaterialComponents.Light" />
                 </LinearLayout>
@@ -105,13 +105,13 @@
                         android:id="@+id/editBizAddress_addBusiness"
                         style="@style/WhiteFont"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="40dp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/information_fields_light"
                         android:ems="10"
                         android:hint="San Lucas"
                         android:inputType="textPersonName"
-                        android:padding="8dp"
+                        android:padding="10dp"
                         android:textSize="16sp"
                         android:theme="@style/Theme.MaterialComponents.Light" />
                 </LinearLayout>
@@ -138,13 +138,13 @@
                         android:id="@+id/editBizType_addBusiness"
                         style="@style/WhiteFont"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="40dp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/information_fields_light"
                         android:ems="10"
                         android:hint="Abarrotería"
                         android:inputType="textPersonName"
-                        android:padding="8dp"
+                        android:padding="10dp"
                         android:textSize="16sp"
                         android:theme="@style/Theme.MaterialComponents.Light" />
                 </LinearLayout>
@@ -187,11 +187,13 @@
 
                         <TextView
                             android:id="@+id/geolocation_status_addBusiness"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/information_fields_light"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_marginTop="8dp"
-                            android:layout_weight="1" />
+                            android:layout_marginHorizontal="8dp"
+                            android:gravity="center"
+                            android:background="@drawable/circle_status_pending"
+                             />
 
                     </LinearLayout>
                 </LinearLayout>

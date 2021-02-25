@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryWhite"
+    android:background="@drawable/gradient_primary_color"
     tools:context=".view.SignUpActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/signup_logo_header"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +53,7 @@
 
     <TextView
         android:id="@+id/signup_header_activity"
-        style="@style/FragmentHeaders"
+        style="@style/FragmentHeadersLight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -105,7 +104,7 @@
 
                 <TextView
                     android:id="@+id/business_name_header"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/business_name"
@@ -113,11 +112,11 @@
 
                 <EditText
                     android:id="@+id/business_name_signup"
-                    style="@style/DarkFont"
+                    style="@style/WhiteFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/information_fields"
+                    android:background="@drawable/information_fields_light"
                     android:ems="10"
                     android:hint="@string/biz_name_hint"
                     android:inputType="textPersonName"
@@ -138,7 +137,7 @@
 
                 <TextView
                     android:id="@+id/account_manager_header"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/account_admin"
@@ -146,11 +145,11 @@
 
                 <EditText
                     android:id="@+id/account_manager_signup"
-                    style="@style/DarkFont"
+                    style="@style/WhiteFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/information_fields"
+                    android:background="@drawable/information_fields_light"
                     android:ems="10"
                     android:hint="@string/account_admin_eg"
                     android:inputType="textPersonName"
@@ -171,7 +170,7 @@
 
                 <TextView
                     android:id="@+id/email_fillin_header"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/email_login"
@@ -179,11 +178,11 @@
 
                 <EditText
                     android:id="@+id/email_fillin_signup"
-                    style="@style/DarkFont"
+                    style="@style/WhiteFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/information_fields"
+                    android:background="@drawable/information_fields_light"
                     android:ems="10"
                     android:hint="@string/email_login"
                     android:inputType="textEmailAddress"
@@ -204,7 +203,7 @@
 
                 <TextView
                     android:id="@+id/phone_fillin_header"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/phone_number"
@@ -212,11 +211,11 @@
 
                 <EditText
                     android:id="@+id/phone_fillin_signup"
-                    style="@style/DarkFont"
+                    style="@style/WhiteFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/information_fields"
+                    android:background="@drawable/information_fields_light"
                     android:ems="10"
                     android:hint="@string/phone_number_hint"
                     android:inputType="phone"
@@ -237,7 +236,7 @@
 
                 <TextView
                     android:id="@+id/address_fillin_header"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/address"
@@ -245,11 +244,11 @@
 
                 <EditText
                     android:id="@+id/address_fillin_signup"
-                    style="@style/DarkFont"
+                    style="@style/WhiteFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/information_fields"
+                    android:background="@drawable/information_fields_light"
                     android:ems="10"
                     android:hint="@string/address_hint"
                     android:inputType="textEmailAddress"
@@ -270,7 +269,7 @@
 
                 <TextView
                     android:id="@+id/password_fillin_header"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/password_login"
@@ -278,11 +277,11 @@
 
                 <EditText
                     android:id="@+id/password_fillin_signup"
-                    style="@style/DarkFont"
+                    style="@style/WhiteFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/information_fields"
+                    android:background="@drawable/information_fields_light"
                     android:ems="10"
                     android:hint="@string/password_login"
                     android:inputType="textPassword"
@@ -303,7 +302,7 @@
 
                 <TextView
                     android:id="@+id/confirm_password_fillin_header"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/reenter_password"
@@ -311,11 +310,11 @@
 
                 <EditText
                     android:id="@+id/confirm_password_fillin_signup"
-                    style="@style/DarkFont"
+                    style="@style/WhiteFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/information_fields"
+                    android:background="@drawable/information_fields_light"
                     android:ems="10"
                     android:hint="@string/reenter_password_hint"
                     android:inputType="textPassword"
@@ -331,7 +330,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/information_fields"
+                android:background="@drawable/information_fields_light"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -346,7 +345,7 @@
 
                 <TextView
                     android:id="@+id/picture_instructions"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFont"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="8dp"
@@ -368,7 +367,7 @@
 
                 <TextView
                     android:id="@+id/location_label"
-                    style="@style/DarkFontItalic"
+                    style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/location"
@@ -383,24 +382,25 @@
                     <TextView
                         android:id="@+id/share_location_button"
                         android:layout_width="0dp"
-                        style="@style/DarkFont"
+                        style="@style/WhiteFont"
                         android:text="Compartir Ubicacion"
                         android:gravity="center"
                         android:layout_height="60dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="4dp"
                         android:layout_weight="3"
-                        android:background="@drawable/information_fields"/>
+                        android:background="@drawable/information_fields_light"/>
 
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/geolocation_status_signup"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/warning_icon" />
+                        android:layout_marginHorizontal="8dp"
+                        android:gravity="center"
+                        android:background="@drawable/circle_status_pending"
+                        />
 
                 </LinearLayout>
 
@@ -418,27 +418,26 @@
 
                 <TextView
                     android:id="@+id/cancel_signup"
+                    style="@style/WhiteFont"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:background="@drawable/light_button"
+                    android:background="@drawable/grey_transparent_button"
                     android:gravity="center"
                     android:text="@string/cancel"
-                    android:textAppearance="@style/DarkFont"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/save_signup"
-                    style="@style/WhiteFont"
+                    style="@style/DarkFont"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="8dp"
+                    android:background="@drawable/light_button"
                     android:layout_weight="1"
-                    android:background="@drawable/dark_button"
                     android:gravity="center"
                     android:text="@string/register"
-                    android:textAppearance="@style/WhiteFont"
                     android:textSize="18sp" />
 
             </LinearLayout>

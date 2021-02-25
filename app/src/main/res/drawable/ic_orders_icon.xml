@@ -8,7 +8,7 @@
       android:fillColor="@color/colorPrimary"/>
   <path
       android:pathData="M8.66,24.28h96.38v138.58h-96.38z"
-      android:fillColor="#fff"/>
+      android:fillColor="@color/colorPrimaryWhite"/>
   <path
       android:pathData="M38.38,11.11H75.33a2.81,2.81 0,0 1,2.81 2.81V28.73a2.8,2.8 0,0 1,-2.8 2.8h-37a2.81,2.81 0,0 1,-2.81 -2.81V13.91A2.81,2.81 0,0 1,38.38 11.11Z"
       android:fillColor="@color/colorAccent"/>
@@ -44,7 +44,7 @@
       android:fillColor="#454f56"/>
   <path
       android:pathData="M28.42,72.31a7,7 0,1 1,-7 -7A7,7 0,0 1,28.42 72.31Z"
-      android:fillColor="#fff"/>
+      android:fillColor="@color/colorPrimaryWhite"/>
   <path
       android:pathData="M24.75,69.26l-4.13,6.09l-2.5,-2.37"
       android:strokeLineJoin="round"
@@ -57,7 +57,7 @@
       android:fillColor="#454f56"/>
   <path
       android:pathData="M28.42,96.94a7,7 0,1 1,-7 -7A7,7 0,0 1,28.42 96.94Z"
-      android:fillColor="#fff"/>
+      android:fillColor="@color/colorPrimaryWhite"/>
   <path
       android:pathData="M24.75,93.89l-4.13,6.09l-2.5,-2.38"
       android:strokeLineJoin="round"
@@ -70,7 +70,7 @@
       android:fillColor="#454f56"/>
   <path
       android:pathData="M28.42,121.56a7,7 0,1 1,-7 -7A7,7 0,0 1,28.42 121.56Z"
-      android:fillColor="#fff"/>
+      android:fillColor="@color/colorPrimaryWhite"/>
   <path
       android:pathData="M23.51,118.57L19.37,124.67"
       android:strokeLineJoin="round"

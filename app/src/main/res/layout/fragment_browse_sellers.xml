@@ -27,7 +27,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/colorGray"
+            android:background="@drawable/grey_transparent_button"
             android:theme="@style/Theme.MaterialComponents.Light"
             android:inputType="text"
             app:iconifiedByDefault="false"

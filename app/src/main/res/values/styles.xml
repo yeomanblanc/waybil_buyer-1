@@ -9,6 +9,11 @@
         <item name="android:fontFamily">@font/futura_medium</item>
     </style>
 
+    <style name="LogoFont">
+        <item name="android:textColor">@color/colorPrimaryWhite</item>
+        <item name="android:fontFamily">@font/astro_space</item>
+    </style>
+
 
     <style name="WhiteFont">
         <item name="android:textColor">@color/colorPrimaryWhite</item>
