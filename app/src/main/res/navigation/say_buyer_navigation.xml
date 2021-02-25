@@ -11,13 +11,6 @@
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment_to_browseSellersFragment"
-            app:destination="@id/browseSellersFragment"
-            app:enterAnim="@anim/slide_up"
-            app:exitAnim="@anim/slide_down"
-            app:popEnterAnim="@anim/slide_up"
-            app:popExitAnim="@anim/slide_down" />
-        <action
             android:id="@+id/action_homeFragment_to_transactionsFragment"
             app:destination="@id/transactionsFragment"
             app:enterAnim="@anim/slide_up"
@@ -34,6 +27,13 @@
         <action
             android:id="@+id/action_homeFragment_to_basketFragment"
             app:destination="@id/basketFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_homeFragment_to_businessFragment"
+            app:destination="@id/businessFragment"
             app:enterAnim="@anim/slide_up"
             app:exitAnim="@anim/slide_down"
             app:popEnterAnim="@anim/slide_up"
@@ -103,4 +103,25 @@
             app:argType="string"/>
 
     </fragment>
+    <fragment
+        android:id="@+id/businessFragment"
+        android:name="saymobile.company.saytechbuyer.view.businesses.BusinessFragment"
+        android:label="BusinessFragment"
+        tools:layout="@layout/fragment_business">
+        <action
+            android:id="@+id/action_businessFragment_to_addBusinessFragment"
+            app:destination="@id/addBusinessFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_businessFragment_to_browseSellersFragment"
+            app:destination="@id/browseSellersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBusinessFragment"
+        android:name="saymobile.company.saytechbuyer.view.businesses.AddBusinessFragment"
+        android:label="AddBusinessFragment"
+        tools:layout="@layout/fragment_add_business"/>
 </navigation>

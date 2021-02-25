@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
 
 
         searchDistri_button_home.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToBrowseSellersFragment()
+            val action = HomeFragmentDirections.actionHomeFragmentToBusinessFragment()
             Navigation.findNavController(it).navigate(action)
         }
 

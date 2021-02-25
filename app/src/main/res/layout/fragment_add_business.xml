@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_fragment_dark"
+        tools:context=".view.businesses.AddBusinessFragment">
+
+        <TextView
+            android:id="@+id/addBusiness_fragment_header"
+            style="@style/FragmentHeadersLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Add Business"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/close_fragment_addBusiness"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close" />
+
+        <ScrollView
+            android:id="@+id/add_business_scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addBusiness_fragment_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/bizName_layout_addBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/bizName_header_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Business Name"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editBizName_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/information_fields_light"
+                        android:ems="10"
+                        android:hint="Tienda San Lucas"
+                        android:inputType="textPersonName"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bizAddress_layout_addBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/bizAddress_header_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Business Address"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editBizAddress_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/information_fields_light"
+                        android:ems="10"
+                        android:hint="San Lucas"
+                        android:inputType="textPersonName"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bizType_layout_addBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/bizType_header_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Business Type"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editBizType_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/information_fields_light"
+                        android:ems="10"
+                        android:hint="Abarrotería"
+                        android:inputType="textPersonName"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bizLocation_layout_addBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/bizLocation_header_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Business Location"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/shareLocation_addBusiness"
+                            style="@style/WhiteFont"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="3"
+                            android:background="@drawable/information_fields_light"
+                            android:gravity="center"
+                            android:text="Compartir Ubicacion" />
+
+
+                        <TextView
+                            android:id="@+id/geolocation_status_addBusiness"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/information_fields_light"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="32dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/cancel_addBusiness"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dark_button"
+                        android:gravity="center"
+                        android:text="@string/cancel"
+                        android:textAppearance="@style/WhiteFont"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/save_addBusiness"
+                        style="@style/DarkFont"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/light_button"
+                        android:gravity="center"
+                        android:text="Add"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/addBusiness_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/add_business_scrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

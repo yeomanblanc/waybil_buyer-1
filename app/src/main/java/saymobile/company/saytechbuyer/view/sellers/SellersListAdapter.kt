@@ -9,7 +9,8 @@ import kotlinx.android.synthetic.main.item_seller.view.*
 import saymobile.company.saytechbuyer.R
 import saymobile.company.saytechbuyer.model.user.User
 
-class SellersListAdapter (val sellersList: ArrayList<User>) : RecyclerView.Adapter<SellersListAdapter.SellersListViewHolder>(){
+class SellersListAdapter (val sellersList: ArrayList<User>) :
+    RecyclerView.Adapter<SellersListAdapter.SellersListViewHolder>(){
 
     fun updateSellersList(newSellersList: List<User>){
         sellersList.clear()

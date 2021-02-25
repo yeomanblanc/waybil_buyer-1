@@ -50,7 +50,7 @@ class BrowseSellersViewModel: ViewModel() {
                     val seller = it.toObject(User::class.java)
                     if(seller != null){
                         snapshotList.add(seller)
-                }
+                    }
                 }
                 filteredList = snapshotList
                 _sellersListLoadError.value = false
