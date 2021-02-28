@@ -49,6 +49,11 @@ class BusinessFragment : Fragment() {
             adapter = businessListAdapter
         }
 
+        scan_button.setOnClickListener {
+            val action = BusinessFragmentDirections.actionBusinessFragmentToScanBusinessId()
+            Navigation.findNavController(it).navigate(action)
+        }
+
         searchView_business.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return true

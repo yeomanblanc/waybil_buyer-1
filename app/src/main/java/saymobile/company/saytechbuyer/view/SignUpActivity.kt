@@ -49,8 +49,6 @@ class SignUpActivity : AppCompatActivity() {
     private var imageUri: Uri? = null
     private var userLocation: GeoPoint? = null
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private var mLocationRequest = LocationRequest.create()
-    private var mLocationCallback = LocationCallback()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

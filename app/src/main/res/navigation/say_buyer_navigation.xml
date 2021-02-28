@@ -122,10 +122,22 @@
             app:exitAnim="@anim/slide_down"
             app:popEnterAnim="@anim/slide_up"
             app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_businessFragment_to_scanBusinessId"
+            app:destination="@id/scanBusinessId"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
     </fragment>
     <fragment
         android:id="@+id/addBusinessFragment"
         android:name="saymobile.company.saytechbuyer.view.businesses.AddBusinessFragment"
         android:label="AddBusinessFragment"
         tools:layout="@layout/fragment_add_business"/>
+    <fragment
+        android:id="@+id/scanBusinessId"
+        android:name="saymobile.company.saytechbuyer.view.sellers.ScanBusinessId"
+        android:label="ScanBusinessId"
+        tools:layout="@layout/fragment_scan_business_id"/>
 </navigation>

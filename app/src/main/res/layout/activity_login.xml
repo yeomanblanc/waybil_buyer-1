@@ -205,5 +205,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linear_login" />
 
+    <TextView
+        android:id="@+id/app_type_login"
+        style="@style/LogoFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="BUYER"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/tech_word"
+        app:layout_constraintStart_toStartOf="@+id/say_word"
+        app:layout_constraintTop_toBottomOf="@+id/say_word" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
