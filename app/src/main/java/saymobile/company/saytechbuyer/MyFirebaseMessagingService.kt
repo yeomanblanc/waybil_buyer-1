@@ -11,13 +11,21 @@ import com.google.firebase.messaging.RemoteMessage
 import saymobile.company.saytechbuyer.view.DashboardActivity
 
 private const val CHANNEL_ID = "ORDER_CHANNEL_ID"
+/*
+Check to see if user is signed in - if he is then send token to database otherwise do not
+maybe send to it Utils and there will be a check to see if it is null
+    If it is null that nothing happens
+    if it is not null then we make a write to database and reset it to null
+ */
 
-
+/**
+ * UPDATE ON NEW TOKEN CODE NOW THAT WE HAVE MULTIPLE DEVICE SUPPORT FOR SIGN INS
+ */
 class MyFirebaseMessagingService : FirebaseMessagingService(){
 
     override fun onNewToken(token: String) {
         Log.d("Token", "Token refreshed: $token")
-        sendRegistrationTokenToServer(token)
+//        sendRegistrationTokenToServer(token)
     }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {

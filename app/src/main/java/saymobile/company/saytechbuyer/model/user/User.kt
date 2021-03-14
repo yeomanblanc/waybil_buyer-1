@@ -14,7 +14,9 @@ data class User (
     val businessEmail: String? = "",
     val accountManager: String? = "",
     val dateJoined: Timestamp? = null,
-    val geoLocation: GeoPoint? = null
+    val geoLocation: GeoPoint? = null,
+    val connectedDevices: ArrayList<Device> = arrayListOf(),
+    val devicesAuthorized: Int = 1
 
 
 )

@@ -39,6 +39,7 @@ class ScanBusinessId : Fragment(), ZXingScannerView.ResultHandler {
             findNavController().navigateUp()
         }
 
+        // Stop use of camera when fragment closes
         Dexter.withContext(activity)
             .withPermission(Manifest.permission.CAMERA)
             .withListener(object : PermissionListener{

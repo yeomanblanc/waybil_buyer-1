@@ -77,7 +77,7 @@
     <string name="basket_with_other_seller_message">"Existe un pedido con otro vendedor. " +
                         "Si deseas continuar, ese pedido se eliminará y se creará uno nuevo." </string>
     <string name="continuar">Continuar</string>
-    <string name="email_notfound_error">El usuario no esta correcto. Por favor verifique la información nuevamente</string>
+    <string name="email_notfound_error">Falta el usuario. Por favor verifique la información nuevamente</string>
     <string name="no_passowrd_error">Falta tu contraseña</string>
 
     <!-- Notifcation channel info below -->

@@ -63,13 +63,13 @@
 
         <TextView
             android:id="@+id/scan_instructions"
+            style="@style/WhiteFontBold"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            style="@style/WhiteFontBold"
-            android:textSize="22sp"
+            android:layout_marginBottom="16dp"
             android:gravity="center"
-            android:layout_marginBottom="32dp"
             android:text="Scan seller's QR code"
+            android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

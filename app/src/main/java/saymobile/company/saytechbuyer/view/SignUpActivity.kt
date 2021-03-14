@@ -15,6 +15,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.provider.Settings
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -26,11 +27,14 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.GeoPoint
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import saymobile.company.saytechbuyer.R
 import saymobile.company.saytechbuyer.getCurrentLocation
+import saymobile.company.saytechbuyer.model.user.Device
 import saymobile.company.saytechbuyer.model.user.User
 import saymobile.company.saytechbuyer.resetTempGeoPoint
 import saymobile.company.saytechbuyer.viewModel.signup.SignUpViewModel
@@ -49,11 +53,24 @@ class SignUpActivity : AppCompatActivity() {
     private var imageUri: Uri? = null
     private var userLocation: GeoPoint? = null
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private var pushToken: String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
+        /**
+         * REMOVE AND REORGANISE THIS FUNCTIONALITY
+         */
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if(!task.isSuccessful){
+                Log.w("Token", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            pushToken = task.result
+        })
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -179,12 +196,15 @@ class SignUpActivity : AppCompatActivity() {
             return
         }
 
+        val devices = arrayListOf<Device>(Device(pushToken, true,
+            Timestamp.now()))
+
         viewModel.currentUser.observe(this, Observer { currentUser ->
             currentUser?.let {
                 val user = User(
                     //Add address edittext in signup
                     currentUser.uid, businessName, businessAddress, phonenumber, userEmail, accountManager,
-                    Timestamp.now(), userLocation)
+                    Timestamp.now(), userLocation, devices)
                 viewModel.createUserDatabase(user, imageUri!!)
 
             }

@@ -3,14 +3,17 @@ package saymobile.company.saytechbuyer.view
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.navigation.Navigation
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.ktx.messaging
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import saymobile.company.saytechbuyer.R
@@ -26,6 +29,7 @@ class DashboardActivity : AppCompatActivity() {
     private var mFirebaseDatabase = FirebaseFirestore.getInstance()
     private var currentUser = FirebaseAuth.getInstance().currentUser
     private var userId = currentUser!!.uid
+    private var userToken: String = ""
     private var basketReference = mFirebaseDatabase.collection("buyersOrders")
         .document(userId).collection("orders")
 
@@ -34,7 +38,6 @@ class DashboardActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dashboard)
 
         createNotificationChannel()
-        Firebase.messaging.isAutoInitEnabled = true
 
         user_name_dashboard.setOnClickListener {
             Navigation.findNavController(this, R.id.nav_host_fragment).popBackStack(R.id.homeFragment, false)
@@ -51,6 +54,24 @@ class DashboardActivity : AppCompatActivity() {
         home_button.setOnClickListener {
             Navigation.findNavController(this, R.id.nav_host_fragment).popBackStack(R.id.homeFragment, false)
         }
+
+        /**
+         * REMOVE THIS LATER TOO
+         */
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w("Token Fetch", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            userToken = task.result
+
+        })
+
+        /**
+         *
+         */
 
 
 
@@ -102,6 +123,7 @@ class DashboardActivity : AppCompatActivity() {
                 if(currentUserProf.businessName.isNotEmpty()){
                     user_name_dashboard.text = currentUserProf.businessName
                 }
+                checkSignedInStatus(currentUserProf)
             }
         }
 
@@ -121,6 +143,22 @@ class DashboardActivity : AppCompatActivity() {
             notificationManager.createNotificationChannel(channel)
 
             Log.d("Notification Channel", "Notification Channel created")
+        }
+    }
+
+    /**
+     * MOVE ALL THIS CODE TO A VIEWMODEL WHEN TESTING IS DONE
+     */
+
+    private fun checkSignedInStatus(user: User){
+        val deviceList = user.connectedDevices
+        for (device in deviceList){
+            if (device.deviceId == userToken && !device.signedIn){
+                val intent = Intent(this, LoginActivity::class.java)
+                FirebaseAuth.getInstance().signOut()
+                this.finish()
+                startActivity(intent)
+            }
         }
     }
 
