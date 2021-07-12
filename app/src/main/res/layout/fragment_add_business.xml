@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:text="Add Business"
+            android:text="@string/add_business"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,18 +65,19 @@
                         style="@style/WhiteFont"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Business Name"
+                        android:text="@string/business_name"
                         android:textSize="16sp" />
 
                     <EditText
                         android:id="@+id/editBizName_addBusiness"
                         style="@style/WhiteFont"
                         android:layout_width="match_parent"
+                        android:textColorHint="@color/colorLightGray"
                         android:layout_height="40dp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/information_fields_light"
                         android:ems="10"
-                        android:hint="Tienda San Lucas"
+                        android:hint="@string/business_name_hint"
                         android:inputType="textPersonName"
                         android:padding="10dp"
                         android:textSize="16sp"
@@ -98,7 +99,7 @@
                         style="@style/WhiteFont"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Business Address"
+                        android:text="@string/address"
                         android:textSize="16sp" />
 
                     <EditText
@@ -107,10 +108,45 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="8dp"
+                        android:textColorHint="@color/colorLightGray"
                         android:background="@drawable/information_fields_light"
                         android:ems="10"
-                        android:hint="San Lucas"
+                        android:hint="@string/address_hint_specific"
                         android:inputType="textPersonName"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bizPhone_layout_addBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/bizPhone_header_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone_number"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editBizPhone_addBusiness"
+                        style="@style/WhiteFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:background="@drawable/information_fields_light"
+                        android:ems="10"
+                        android:hint="@string/phone_number_hint"
+                        android:inputType="phone"
                         android:padding="10dp"
                         android:textSize="16sp"
                         android:theme="@style/Theme.MaterialComponents.Light" />
@@ -131,7 +167,7 @@
                         style="@style/WhiteFont"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Business Type"
+                        android:text="@string/business_type"
                         android:textSize="16sp" />
 
                     <EditText
@@ -142,7 +178,8 @@
                         android:layout_marginTop="8dp"
                         android:background="@drawable/information_fields_light"
                         android:ems="10"
-                        android:hint="Abarrotería"
+                        android:hint="@string/business_type_hint"
+                        android:textColorHint="@color/colorLightGray"
                         android:inputType="textPersonName"
                         android:padding="10dp"
                         android:textSize="16sp"
@@ -164,7 +201,7 @@
                         style="@style/WhiteFont"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Business Location"
+                        android:text="@string/location"
                         android:textSize="16sp" />
 
                     <LinearLayout
@@ -182,7 +219,7 @@
                             android:layout_weight="3"
                             android:background="@drawable/information_fields_light"
                             android:gravity="center"
-                            android:text="Compartir Ubicacion" />
+                            android:text="@string/share_location" />
 
 
                         <TextView
@@ -229,7 +266,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/light_button"
                         android:gravity="center"
-                        android:text="Add"
+                        android:text="@string/add"
                         android:textSize="18sp" />
 
                 </LinearLayout>

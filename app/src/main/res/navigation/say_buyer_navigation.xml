@@ -7,16 +7,9 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="saymobile.company.saytechbuyer.view.home.HomeFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_transactionsFragment"
-            app:destination="@id/transactionsFragment"
-            app:enterAnim="@anim/slide_up"
-            app:exitAnim="@anim/slide_down"
-            app:popEnterAnim="@anim/slide_up"
-            app:popExitAnim="@anim/slide_down" />
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment"
@@ -38,10 +31,24 @@
             app:exitAnim="@anim/slide_down"
             app:popEnterAnim="@anim/slide_up"
             app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_homeFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment2"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_homeFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
     </fragment>
     <fragment
         android:id="@+id/browseSellersFragment"
-        android:name="saymobile.company.saytechbuyer.view.sellers.BrowseSellersFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.sellers.BrowseSellersFragment"
         android:label="BrowseSellersFragment"
         tools:layout="@layout/fragment_browse_sellers">
         <action
@@ -53,21 +60,8 @@
             app:popExitAnim="@anim/slide_down" />
     </fragment>
     <fragment
-        android:id="@+id/transactionsFragment"
-        android:name="saymobile.company.saytechbuyer.view.transactions.TransactionsFragment"
-        android:label="TransactionsFragment"
-        tools:layout="@layout/fragment_transactions">
-        <action
-            android:id="@+id/action_transactionsFragment_to_transactionDetails"
-            app:destination="@id/transactionDetails"
-            app:enterAnim="@anim/slide_up"
-            app:exitAnim="@anim/slide_down"
-            app:popEnterAnim="@anim/slide_up"
-            app:popExitAnim="@anim/slide_down" />
-    </fragment>
-    <fragment
         android:id="@+id/sellerStoreFragment"
-        android:name="saymobile.company.saytechbuyer.view.sellers.SellerStoreFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.sellers.SellerStoreFragment"
         android:label="SellerStoreFragment"
         tools:layout="@layout/fragment_seller_store">
         <argument
@@ -79,22 +73,41 @@
             android:defaultValue="0"
             app:argType="string"
             />
+        <argument
+            android:name="forDelivery"
+            android:defaultValue="false"
+            app:argType="boolean"/>
+        <action
+            android:id="@+id/action_sellerStoreFragment_to_basketFragment"
+            app:destination="@id/basketFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="saymobile.company.saytechbuyer.view.profile.ProfileFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.profile.ProfileFragment"
         android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile"/>
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_scanBusinessId"
+            app:destination="@id/scanBusinessId"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
     <fragment
         android:id="@+id/basketFragment"
-        android:name="saymobile.company.saytechbuyer.view.basket.BasketFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.basket.BasketFragment"
         android:label="fragment_basket"
         tools:layout="@layout/fragment_basket" />
     <fragment
         android:id="@+id/transactionDetails"
-        android:name="saymobile.company.saytechbuyer.view.transactions.TransactionDetails"
+        android:name="waybilmobile.company.waybilbuyer.view.orders.OrderDetails"
         android:label="TransactionDetails"
-        tools:layout="@layout/fragment_transaction_details"
+        tools:layout="@layout/fragment_order_details"
         >
 
         <argument
@@ -105,7 +118,7 @@
     </fragment>
     <fragment
         android:id="@+id/businessFragment"
-        android:name="saymobile.company.saytechbuyer.view.businesses.BusinessFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.businesses.BusinessFragment"
         android:label="BusinessFragment"
         tools:layout="@layout/fragment_business">
         <action
@@ -116,15 +129,8 @@
             app:popEnterAnim="@anim/slide_up"
             app:popExitAnim="@anim/slide_down" />
         <action
-            android:id="@+id/action_businessFragment_to_browseSellersFragment"
-            app:destination="@id/browseSellersFragment"
-            app:enterAnim="@anim/slide_up"
-            app:exitAnim="@anim/slide_down"
-            app:popEnterAnim="@anim/slide_up"
-            app:popExitAnim="@anim/slide_down" />
-        <action
-            android:id="@+id/action_businessFragment_to_scanBusinessId"
-            app:destination="@id/scanBusinessId"
+            android:id="@+id/action_businessFragment_to_businessDetailsFragment"
+            app:destination="@id/businessDetailsFragment"
             app:enterAnim="@anim/slide_up"
             app:exitAnim="@anim/slide_down"
             app:popEnterAnim="@anim/slide_up"
@@ -132,12 +138,56 @@
     </fragment>
     <fragment
         android:id="@+id/addBusinessFragment"
-        android:name="saymobile.company.saytechbuyer.view.businesses.AddBusinessFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.businesses.AddBusinessFragment"
         android:label="AddBusinessFragment"
         tools:layout="@layout/fragment_add_business"/>
     <fragment
         android:id="@+id/scanBusinessId"
-        android:name="saymobile.company.saytechbuyer.view.sellers.ScanBusinessId"
+        android:name="waybilmobile.company.waybilbuyer.view.sellers.ScanBusinessId"
         android:label="ScanBusinessId"
         tools:layout="@layout/fragment_scan_business_id"/>
+    <fragment
+        android:id="@+id/businessDetailsFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.businesses.BusinessDetailsFragment"
+        android:label="BusinessDetailsFragment"
+        tools:layout="@layout/fragment_business_details">
+        <action
+            android:id="@+id/action_businessDetailsFragment_to_browseSellersFragment"
+            app:destination="@id/browseSellersFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionsFragment2"
+        android:name="waybilmobile.company.waybilbuyer.view.transactions.TransactionsFragment"
+        android:label="TransactionsFragment"
+        tools:layout="@layout/fragment_transactions">
+        <action
+            android:id="@+id/action_transactionsFragment_to_transactionDetailsFragment"
+            app:destination="@id/transactionDetailsFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.orders.OrdersFragment"
+        android:label="OrdersFragment"
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/action_ordersFragment_to_transactionDetails"
+            app:destination="@id/transactionDetails"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionDetailsFragment"
+        android:name="waybilmobile.company.waybilbuyer.view.transactions.TransactionDetailsFragment"
+        android:label="TransactionDetailsFragment"
+        tools:layout="@layout/fragment_transaction_details"/>
 </navigation>

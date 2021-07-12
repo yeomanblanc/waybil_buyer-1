@@ -14,9 +14,9 @@
         android:layout_marginEnd="7dp"
         android:fontFamily="@font/astro_space"
         android:gravity="center_vertical"
-        android:text="S a y"
+        android:text="w a y"
         android:textColor="@color/colorPrimaryWhite"
-        android:textSize="45sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/linear_login"
         app:layout_constraintEnd_toStartOf="@+id/tech_word"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -29,6 +29,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
         android:orientation="vertical"
@@ -63,7 +64,10 @@
                 android:ems="10"
                 android:inputType="textEmailAddress"
                 android:padding="12dp"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:autofillHints="hello" />
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -117,9 +121,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:visibility="invisible"
             android:text="@string/forgot_password"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:visibility="visible" />
+
         <TextView
             android:id="@+id/error_login"
             style="@style/WhiteFont"
@@ -127,9 +132,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="4dp"
-            android:visibility="gone"
             android:text="@string/login_error"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -184,11 +189,11 @@
         android:id="@+id/tech_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="6dp"
         android:fontFamily="@font/astro_space"
-        android:text="t e c h"
+        android:text="b i l"
         android:textColor="@color/colorAccent"
-        android:textSize="45sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/say_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/say_word"
@@ -211,8 +216,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="BUYER"
-        android:textSize="23sp"
+        android:text="@string/buy"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/tech_word"
         app:layout_constraintStart_toStartOf="@+id/say_word"
         app:layout_constraintTop_toBottomOf="@+id/say_word" />

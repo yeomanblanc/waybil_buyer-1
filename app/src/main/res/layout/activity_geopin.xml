@@ -13,11 +13,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Choose Location"
-        android:textSize="32dp"
+        android:text="@string/find_your_business_location"
+        android:gravity="center"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/geopoint_shareLocation"
+        style="@style/DarkFont"
+        android:background="@drawable/light_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:paddingHorizontal="8dp"
+        android:elevation="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/share_location"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/geopoint_activity_header" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -40,7 +61,7 @@
             android:layout_weight="1"
             android:background="@drawable/grey_transparent_button"
             android:gravity="center"
-            android:text="Cancelar"
+            android:text="@string/cancel"
             android:textAppearance="@style/WhiteFont"
             android:textSize="18sp" />
 
@@ -52,7 +73,7 @@
             android:layout_weight="1"
             android:background="@drawable/light_button"
             android:gravity="center"
-            android:text="Guardar"
+            android:text="@string/save"
             android:textAppearance="@style/DarkFont"
             android:textSize="18sp" />
 
@@ -63,15 +84,13 @@
         android:id="@+id/cardView_geopoint_activity"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="32dp"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/geopoint_activity_header">
+        app:layout_constraintTop_toBottomOf="@+id/geopoint_shareLocation">
 
         <FrameLayout
             android:layout_width="match_parent"

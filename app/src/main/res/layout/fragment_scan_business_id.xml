@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:text="Scan Provider"
+            android:text="@string/escanear_codigo_qr"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,18 +58,30 @@
                 android:layout_marginVertical="64dp"
                 android:layout_gravity="center" />
 
+            <Button
+                android:id="@+id/re_scan_qr"
+                style="@style/WhiteFontBold"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="@string/escanear_otra_vez" />
+
 
         </FrameLayout>
 
         <TextView
             android:id="@+id/scan_instructions"
             style="@style/WhiteFontBold"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
             android:layout_marginBottom="16dp"
             android:gravity="center"
-            android:text="Scan seller's QR code"
-            android:textSize="22sp"
+            android:text="--"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

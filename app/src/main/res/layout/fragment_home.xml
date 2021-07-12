@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_orders_icon" />
+                app:srcCompat="@drawable/ic_orders_iconii" />
 
             <TextView
                 android:id="@+id/orders_textview"
@@ -42,8 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="@string/transaction_history"
-                android:textSize="18sp" />
+                android:text="@string/orders"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,9 +67,9 @@
                 android:id="@+id/image_searchDistributors"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:padding="10dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_browse_stores_icon" />
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_store_front" />
 
             <TextView
                 android:id="@+id/customers_textview"
@@ -77,10 +77,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/sellers"
-                android:textSize="18sp" />
+                android:text="@string/my_businesses"
+                android:textSize="14sp" />
+
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/transactions_button"
+            android:layout_width="0dp"
+            style="@style/DarkFont"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/white_buttons_bg"
+            android:layout_marginEnd="24dp"
+            android:text="@string/transaction_history"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transactions_button_home"
+            app:layout_constraintVertical_chainStyle="packed" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

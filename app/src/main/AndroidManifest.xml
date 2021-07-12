@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="saymobile.company.saytechbuyer">
+    package="waybilmobile.company.waybilbuyer">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <uses-feature
-        android:name="android.hardware.camera2"
+        android:name="android.hardware.camera"
         android:required="true" />
 
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -17,22 +18,22 @@
 
     <application
         android:allowBackup="false"
-        android:icon="@mipmap/ic_say_icon"
+        android:icon="@mipmap/ic_waybil_buyer_logo"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_say_icon_round"
+        android:roundIcon="@mipmap/ic_waybil_buyer_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.GeopinActivity"
+        <activity android:name="waybilmobile.company.waybilbuyer.view.GeopinActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
         <!-- Figure out what error is below -->
         <service
-            android:name=".view.SignUpActivity"
+            android:name="waybilmobile.company.waybilbuyer.view.SignUpActivity"
             android:foregroundServiceType="location"
             tools:ignore="Instantiatable" />
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name="waybilmobile.company.waybilbuyer.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -41,7 +42,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="saymobile.company.saytechbuyer.fileprovider"
+            android:authorities="waybilmobile.company.waybilbuyer.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -54,15 +55,15 @@
             android:value="${mapsApiKey}" />
 
         <activity
-            android:name=".view.SignUpActivity"
+            android:name="waybilmobile.company.waybilbuyer.view.SignUpActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.DashboardActivity"
+            android:name="waybilmobile.company.waybilbuyer.view.DashboardActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.LoginActivity"
+            android:name="waybilmobile.company.waybilbuyer.view.LoginActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -74,7 +75,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_saytech_logo" />
+            android:resource="@drawable/ic_logo_waybil_buyer" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorPrimary" />

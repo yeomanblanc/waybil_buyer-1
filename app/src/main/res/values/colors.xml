@@ -12,6 +12,7 @@
     <color name="colorLightBack">#29304C</color>
     <color name="colorLightBlueLogo">#95C6EB</color>
     <color name="colorEndGradientPrimary">#1A3377</color>
+    <color name="colorWhiteTransparent">#97FFFFFF</color>
     <color name="colorPrimaryTransparent">#1F0D1842</color>
     <color name="warningRed">#F44336</color>
     <color name="transparent">#00FFFFFF</color>

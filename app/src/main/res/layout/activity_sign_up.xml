@@ -24,7 +24,7 @@
             android:layout_marginEnd="6dp"
             android:fontFamily="@font/astro_space"
             android:gravity="center_vertical"
-            android:text="S a y"
+            android:text="w a y"
             android:textColor="@color/colorPrimaryWhite"
             android:textSize="35sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +40,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="5dp"
             android:fontFamily="@font/astro_space"
-            android:text="t e c h"
+            android:text="b i l"
             android:textColor="@color/colorAccent"
             android:textSize="35sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -138,20 +138,54 @@
                 <TextView
                     android:id="@+id/account_manager_header"
                     style="@style/WhiteFontItalic"
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/account_admin"
                     android:textSize="16sp" />
 
+                <TextView
+                    android:id="@+id/name_header_signup"
+                    style="@style/WhiteFontItalic"
+                    android:layout_marginTop="8sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textSize="16sp" />
+
+
                 <EditText
-                    android:id="@+id/account_manager_signup"
+                    android:id="@+id/account_manager_name"
+                    style="@style/WhiteFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/information_fields_light"
+                    android:ems="10"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textSize="16sp"
+                    android:theme="@style/Theme.MaterialComponents.Light" />
+
+                <TextView
+                    android:id="@+id/surname_header_signup"
+                    style="@style/WhiteFontItalic"
+                    android:layout_marginTop="8sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/surname"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/account_manager_surname"
                     style="@style/WhiteFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/information_fields_light"
                     android:ems="10"
-                    android:hint="@string/account_admin_eg"
+                    android:hint="@string/surname"
                     android:inputType="textPersonName"
                     android:padding="8dp"
                     android:textSize="16sp"
@@ -224,38 +258,38 @@
                     android:theme="@style/Theme.MaterialComponents.Light" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/address_fillin_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/address_fillin_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:orientation="vertical">-->
 
 
-                <TextView
-                    android:id="@+id/address_fillin_header"
-                    style="@style/WhiteFontItalic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/address"
-                    android:textSize="16sp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/address_fillin_header"-->
+<!--                    style="@style/WhiteFontItalic"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/address"-->
+<!--                    android:textSize="16sp" />-->
 
-                <EditText
-                    android:id="@+id/address_fillin_signup"
-                    style="@style/WhiteFont"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/information_fields_light"
-                    android:ems="10"
-                    android:hint="@string/address_hint"
-                    android:inputType="textEmailAddress"
-                    android:padding="8dp"
-                    android:textSize="16sp"
-                    android:theme="@style/Theme.MaterialComponents.Light" />
-            </LinearLayout>
+<!--                <EditText-->
+<!--                    android:id="@+id/address_fillin_signup"-->
+<!--                    style="@style/WhiteFont"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:background="@drawable/information_fields_light"-->
+<!--                    android:ems="10"-->
+<!--                    android:hint="@string/address_hint"-->
+<!--                    android:inputType="textEmailAddress"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:theme="@style/Theme.MaterialComponents.Light" />-->
+<!--            </LinearLayout>-->
 
             <LinearLayout
                 android:id="@+id/password_fillin_layout"
@@ -305,7 +339,7 @@
                     style="@style/WhiteFontItalic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/reenter_password"
+                    android:text="@string/enter_password_confirmation"
                     android:textSize="16sp" />
 
                 <EditText
@@ -316,43 +350,11 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/information_fields_light"
                     android:ems="10"
-                    android:hint="@string/reenter_password_hint"
+                    android:hint="@string/enter_password_confirmation"
                     android:inputType="textPassword"
                     android:padding="8dp"
                     android:textSize="16sp"
                     android:theme="@style/Theme.MaterialComponents.Light" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/upload_image_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/information_fields_light"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/pic_preview"
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_marginVertical="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@android:drawable/ic_menu_gallery" />
-
-                <TextView
-                    android:id="@+id/picture_instructions"
-                    style="@style/WhiteFont"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="8dp"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:text="@string/profile_picture"
-                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -365,44 +367,44 @@
                 android:orientation="vertical">
 
 
-                <TextView
-                    android:id="@+id/location_label"
-                    style="@style/WhiteFontItalic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/location"
-                    android:textSize="16sp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/location_label"-->
+<!--                    style="@style/WhiteFontItalic"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/location"-->
+<!--                    android:textSize="16sp" />-->
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <TextView
-                        android:id="@+id/share_location_button"
-                        android:layout_width="0dp"
-                        style="@style/WhiteFont"
-                        android:text="Compartir Ubicacion"
-                        android:gravity="center"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_weight="3"
-                        android:background="@drawable/information_fields_light"/>
+<!--                    <TextView-->
+<!--                        android:id="@+id/share_location_button"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        style="@style/WhiteFont"-->
+<!--                        android:text="Compartir Ubicacion"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:layout_marginEnd="4dp"-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:background="@drawable/information_fields_light"/>-->
 
 
-                    <TextView
-                        android:id="@+id/geolocation_status_signup"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginHorizontal="8dp"
-                        android:gravity="center"
-                        android:background="@drawable/circle_status_pending"
-                        />
+<!--                    <TextView-->
+<!--                        android:id="@+id/geolocation_status_signup"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:layout_marginHorizontal="8dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:background="@drawable/circle_status_pending"-->
+<!--                        />-->
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
             </LinearLayout>
 

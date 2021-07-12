@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:text="Choose Business"
+            android:text="@string/my_businesses"
             style="@style/FragmentHeaders"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -57,7 +57,7 @@
             android:gravity="center"
             android:textSize="22sp"
             android:background="@drawable/grey_transparent_button"
-            android:text="Add Business"
+            android:text="@string/add_business"
             app:layout_constraintEnd_toEndOf="@+id/searchView_business"
             app:layout_constraintStart_toStartOf="@+id/searchView_business"
             app:layout_constraintTop_toBottomOf="@+id/searchView_business" />
@@ -103,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:text="Add a business!"
+            android:text="@string/add_business_suggestion"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,26 +115,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:text="Oops! Error retrieving businesses"
+            android:text="@string/error_getting_data"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/separation_line_business" />
 
-        <TextView
-            android:id="@+id/scan_button"
-            style="@style/WhiteFont"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/dark_button"
-            android:gravity="center"
-            android:text="Scan"
-            app:layout_constraintBottom_toBottomOf="@+id/business_fragment_header"
-            app:layout_constraintEnd_toStartOf="@+id/close_fragment_business"
-            app:layout_constraintStart_toEndOf="@+id/business_fragment_header"
-            app:layout_constraintTop_toTopOf="@+id/business_fragment_header" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
