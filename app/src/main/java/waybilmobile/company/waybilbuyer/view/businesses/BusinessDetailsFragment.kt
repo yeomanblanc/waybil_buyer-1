@@ -103,11 +103,11 @@ class BusinessDetailsFragment : Fragment(), OnMapReadyCallback {
         val builder = AlertDialog.Builder(activity)
         builder.apply {
             setMessage(getString(R.string.delete_business_query))
-            setPositiveButton(getString(R.string.yes)){dialog, which ->
+            setPositiveButton(getString(R.string.yes)){ dialog, _ ->
                 deleteBusiness()
                 dialog.dismiss()
             }
-            setNegativeButton(getString(R.string.cancel)){dialog, which ->
+            setNegativeButton(getString(R.string.cancel)){ dialog, _ ->
                 dialog.dismiss()
             }
         }

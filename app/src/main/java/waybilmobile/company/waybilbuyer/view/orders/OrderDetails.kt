@@ -170,7 +170,7 @@ class OrderDetails : Fragment(), OnMapReadyCallback {
     private fun getEstimatedDeliveryTime(dateConfirmed: Date, daysToDeliver: Int): String{
         val cal = Calendar.getInstance()
         cal.time = dateConfirmed
-        cal.add(Calendar.DATE, 1)
+        cal.add(Calendar.DATE, daysToDeliver)
         val newDate = cal.time
 
         return SimpleDateFormat("dd/MM/yyyy").format(newDate)

@@ -109,6 +109,7 @@
                 <LinearLayout
                     android:id="@+id/scanDistri_layout_profile"
                     android:layout_width="match_parent"
+                    android:visibility="gone"
                     android:layout_height="80dp"
                     android:orientation="horizontal">
 
