@@ -1,5 +1,7 @@
 ## **Waybil Buyer**
-
+<p align="left">
+  <img src="https://github.com/jsebastiane/waybil_seller/blob/master/WaybilAdScreenshot/appIcon_seller.jpg" width="100" title="hover text">
+</p>
 
 <p align="left">
   <img src="https://github.com/jsebastiane/waybil_buyer/blob/master/playstore_screenshots/screenshot_abastecimiento.jpg" width="250" title="hover text">
