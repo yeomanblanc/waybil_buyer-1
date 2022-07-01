@@ -15,7 +15,7 @@
 </p>
 
 ### The buyer app gives users the ability to:
-####  - Add multiple businesses to manage stock keeping of a franchised business
+####  - Manage stock keeping of multiple businesses
 ####  - View seller inventories
 ####  - Create basket of items and place orders
 ####  - View history of transactions
